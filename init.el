@@ -30,6 +30,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+(setq org-directory "~/Dropbox/org")
 
 ;; Org-mode files that are generatedy by C-c [
 (custom-set-variables
@@ -37,7 +38,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/org/org-mode.org" "~/Dropbox/org/work.org" "~/Dropbox/org/home.org"))))
+ '(org-agenda-files (quote ("~/Dropbox/org/home.org" "~/Dropbox/org/org-mode.org" "~/Dropbox/org/work.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,3 +56,5 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Org-capture
+(setq org-default-notes-file (concat org-directory "/notes.org"))
