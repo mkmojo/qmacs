@@ -58,3 +58,7 @@
 
 ;; Org-capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
+
+;; Set the environment varialbe for sml language
+(setenv "PATH" (concat "/usr/local/smlnj/bin:" (getenv "PATH")))
+(setq exec-path (cons "/usr/local/smlnj/bin" exec-path))
